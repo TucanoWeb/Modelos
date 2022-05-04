@@ -50,6 +50,7 @@ class contaCorrente extends contaBancaria {
         this._cartaoCredito = cartaoCredito;
     }
 
+    // O bloco getter/setter nesse caso não é realmente necessário, pois não há uma função de manipulação do valor do atributo cartaoCredito. No entanto, fica para cunho didático, para reforçar a necessidade do _ (underline) para atributos desse bloco, como se vê acima.
     get cartaoCredito() {
         return this._cartaoCredito;
     }
