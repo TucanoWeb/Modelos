@@ -19,8 +19,13 @@ class numerosPai {
         arrayBase[3] = this.valor4;
         arrayBase[4] = this.valor5;
 
+        //MAP. Através da arrow function, pega-se os valores da array de arrayBase e multiplica, cada um deles, por 2.
         resultadoMap = arrayBase.map((valores) => valores * 2);
+
+        //FILTER. No código abaixo, através da arrow function, foi atribuído o parâmetro valor (mas pode ser qualquer outro nome) que retorna a verificação, em cada item da array, se a divisão por 2 retorna 0. Se for, ele pega o valor e atribui para resultadoPares.
         resultadoPares = arrayBase.filter((valor) => valor % 2 === 0);
+
+        //Reduce. Pega o valor da arrayBase e através da arrow function define os parâmetros prev e atual, entre parentese. Logo depois, define o retorno do valor somando o valor de prev + atual, sendo o valorInicial definido como zero. Na função abaixo, considerando a arrayBase[1,2,3,4,5], valorAnterior (no primeiro loop) será 1 e valorAtual será 2. No primeiro loop, vai somar index[0] + index[1], no segundo loop, vai somar index[1], que passará a ser o valorAnterior + index[2]... e assim por diante.
         resultadoReducao = arrayBase.reduce((valorAnterior, valorAtual) => valorAnterior + valorAtual, valorInicial);
     }
 
@@ -29,7 +34,7 @@ class numerosPai {
 
 
 
-
+//MAP sem criação de classe.
 function mapsemThis(item1, item2, item3, item4, item5) {
 
     arrayBase[0] = item1;
@@ -43,10 +48,3 @@ function mapsemThis(item1, item2, item3, item4, item5) {
     return resultadoMap;
 
 }
-
-//REDUCE
-
-
-
-
-
