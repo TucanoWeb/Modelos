@@ -34,6 +34,7 @@ class listaPrecos {
     colocarCesta(item) {
         cesta[item] = produtos[item];
 
+        
         valorCesta = cesta.reduce((valorInicial, valorAtual) => valorInicial + valorAtual, 0);
 
 
