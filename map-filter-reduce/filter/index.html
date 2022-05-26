@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //TODO: Complete os espaços em branco com uma solução possível para o problema.
+        let alunos = 5;
+        let matricula;
+        let arr = [];
+        var notaFinal = 0;
+
+        for (var i = 0; i < alunos; i++) {
+            line = prompt('Digite: ');
+            arr[i] = line;
+            matricula = parseInt(line);
+            line = line.replace(" ", ',');
+            nota = line.replace(/^[^,]+, */, '');
+            nota = parseFloat(nota).toFixed(1);
+
+
+            if (notaFinal < eval(nota)) {
+
+                notaFinal = nota;
+
+                matriculaMaiorNota = matricula;
+
+            }
+
+
+        }
+
+
+        if (notaFinal > 8) {
+            console.log(matriculaMaiorNota);
+        } else {
+            console.log('Minimum note not reached');
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+Index contêm métodos de substituição de string, substituição com regex, conversão para número inteiro e float com definição de casas decimais limite.

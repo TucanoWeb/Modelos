@@ -1,0 +1,113 @@
+body {
+    background-color: #2b2a2a;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.circle {
+
+    width: 250px;
+    height: 90px;
+    border: grey solid 4px;
+    border-radius: 50px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    transform: translateY(0);
+    animation: chatTranslate 2s ease-in-out infinite;
+}
+
+
+.circle::before{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -20px;
+    left: 50px;
+    border-left: 2px solid transparent;
+    border-right: 17px solid transparent;
+    border-top: 17px solid grey;
+    
+}
+
+/* A seta criada no circle::before foi composto pela seleção de qual parte do quadrado e sua respectiva proporção iriam aparecer. Um quadro é formado de 4 triângulos, sendo o superior, direito, esquerdo e inferior. Para ficar mais fácil de compreender, basta utilizar todas as bordas e inserir uma cor para cada. Depois, basta ir no inspecionar do browser. Segue código abaixo que utilizei para entender
+
+.circle::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -24px;
+    left: 50px;
+    border-left: 73px solid green;
+    border-right: 66px solid black;
+    border-top: 51px solid grey;
+    border-bottom: 31px solid white;
+
+    */
+
+    .points {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: grey;
+        transform: scale(1);
+    }
+
+
+    .points:nth-child(1) {
+        animation: pulsePoints 1.5s ease-in-out infinite;
+
+    }
+
+    .points:nth-child(2) {
+        animation: pulsePoints 1.5s ease-in-out infinite;
+        animation-delay: 0.2s;
+    }
+
+    .points:nth-child(3) {
+        animation: pulsePoints 1.5s ease-in-out infinite;
+        animation-delay: 0.4s;
+    }
+
+
+
+    @keyframes pulsePoints {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+    @keyframes chatTranslate {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(15px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
