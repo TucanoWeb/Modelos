@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Atividade Políndromo e Replace Pares</title>
+</head>
+
+<body>
+
+    <main class="wrapper">
+        <h1>Selecione uma das opções abaixo</h1>
+        <button class="selectionOption1" id="buttonSelectPolindromo">Polindromo</button>
+
+        <div class="polindromoWrapper" id="polindromoWrapper" style="display: none;">
+            <div class="fieldPolindromoWrapper">
+                <input type="text" id="entryPolindromo1" class="fieldPolindromo" placeholder="INSERT WORD">
+                <input type="text" id="entryPolindromo2" class="fieldPolindromo" placeholder="RESULT"
+                    style="pointer-events: none;">
+            </div>
+            <p class="resultVerifyPolindromo" id="resultVerifyPolindromo"></p>
+            <p class="buttonPolindromoVerify" id="verifyPolindromo">VERIFY</p>
+        </div>
+
+
+
+
+        <button class="selectionOption2" id="buttonSelectElves">Replace Elves</button>
+
+        <div class="elvesWrapper" id="elvesWrapper" style="display: none;">
+            <div class="fieldWrapperElves">
+                <input type="text" id="entryElves" class="fieldElves" placeholder="Insert sequency of the numbers">
+
+                <input type="text" id="resultElves" class="resultElvesField" style="pointer-events: none;"
+                    placeholder="REPLACE ELVEN NUMBERS">
+            </div>
+
+            <p class="buttonPolindromoVerify" id="replaceElvesButton">REPLACE ELVES</p>
+        </div>
+
+
+
+
+
+
+    </main>
+
+
+</body>
+
+<script src="assets/js/scriptPolindromo.js"></script>
+<script src="assets/js/scriptElves.js"></script>
+
+</html>
