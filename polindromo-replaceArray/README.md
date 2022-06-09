@@ -9,8 +9,3 @@
 - Utilização de estilização e transitions.
 
 <img src='./assets/imgs/readme.png'>
-
-
-
-=======
->>>>>>> 68dc4c77378285dd40c6be442a30d8d7ffa5b1e8
