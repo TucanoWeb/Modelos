@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 22px;
+}
+
+.teste {
+    color: green;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+}
+
+.botoes {
+    width: 150px;
+    margin: 10px;
+    cursor: pointer;
+}
