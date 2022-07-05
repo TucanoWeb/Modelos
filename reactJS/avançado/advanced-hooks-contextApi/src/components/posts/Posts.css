@@ -1,0 +1,87 @@
+.wrapperComponent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.wrapperPost {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.columnTitle {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.titleField {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.title {
+    width: 250px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.fieldPost {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.columnDescription {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.titleDescription {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.description {
+    width: 250px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonRefresh {
+    border: 1px solid white;
+    width: 150px;
+    height: 50px;
+    color: white;
+    background: rgb(64, 112, 64);
+    border-radius: 15px;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 0;
+    transform: scale(1);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+}
+
+.buttonRefresh:hover {
+    background: rgb(33, 51, 33);
+    transform: scale(0.9);
+
+}

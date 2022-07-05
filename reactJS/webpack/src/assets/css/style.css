@@ -1,0 +1,20 @@
+.botoesAB {
+
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    width: 150px;
+}
+
+.listName {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    
+}
+
+.listSkill {
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+

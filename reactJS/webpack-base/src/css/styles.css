@@ -1,0 +1,38 @@
+/*TAMBÉM É UTILIZADO O BOOTSTRAP, LOCALIZADO EM node_modules/bootstrap*/
+
+h1 {
+    color: white;
+    background-color: black;
+  }
+
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .botaoA {
+    text-transform: uppercase;
+    margin: 10px;
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-family: sans-serif;
+  }
+
+  .botaoB {
+    text-transform: uppercase;
+    margin: 10px;
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-family: sans-serif;
+  }
