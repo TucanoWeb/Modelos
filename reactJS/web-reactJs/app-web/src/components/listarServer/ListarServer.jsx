@@ -4,11 +4,11 @@ function GetServer() {
     const [data, setData] = useState({})
     const [hardware, setHardware] = useState ({})
 
-    const URL = 'https://api-servidores.locaweb.com.br/v1/vps/servers/vps39101/';
+    const URL = 'URL';
 
     let myHeaders = new Headers();
-    myHeaders.append("X-User-Token", "4015ce2ef2020cc6339659ce2fbdc0dcc2a74068c34384ca7fd89e84");
-    myHeaders.append("X-User-Login", "tucanoweb2");
+    myHeaders.append("X-User-Token", "TOKEN);
+    myHeaders.append("X-User-Login", "USER");
 
     let requestOptions = {
         method: 'GET',
