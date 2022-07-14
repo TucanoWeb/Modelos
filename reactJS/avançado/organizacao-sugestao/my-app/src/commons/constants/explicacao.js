@@ -1,0 +1,1 @@
+// Aqui colocar valores que são constantes, por exemplo, um menu, que vai ser utilizado em vários lugares.
