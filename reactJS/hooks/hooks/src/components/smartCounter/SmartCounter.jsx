@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import HookUseCallback from "../HookUseCallback/HookUseCallback";
+import HookUseMemo from "../HookUseMemo/HookUseMemo";
 
 let mode =1;
 
@@ -69,6 +71,9 @@ useEffect(() => {
             <div >
                 <button id="cart" className="cart">R$ {quantity *2 }</button>
             </div>
+
+            <HookUseMemo />
+            <HookUseCallback />
 
          </div>
 
