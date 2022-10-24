@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Home, Login, Feed } from '../pages/index'
+import { Home, Login, Feed, Cadastro } from '../pages/index'
 
 const RoutesLink = () => {
 
@@ -9,6 +9,7 @@ const RoutesLink = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/feed" element={<Feed />} />
+                <Route path="/cadastro" element={<Cadastro />} />
             </Routes>
         </>
     )
