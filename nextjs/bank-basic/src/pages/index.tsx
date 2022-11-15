@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { Header, Input, Datas, Button } from "../components"
 import { ContextFields, ContextProps } from '../Context/Context';
-import { ContainerButtons } from './stylesApp'
+import { ContainerButtons, StatusAccount } from './stylesApp'
 
 export default function Home() {
 
@@ -38,7 +38,9 @@ export default function Home() {
       {data.titular !== '' && (
         <>
           <h3>
+            <StatusAccount>
             Status da Conta: Aberta
+            </StatusAccount>
           </h3>
           <h3>
             Alterar Saldo:
@@ -58,10 +60,15 @@ export default function Home() {
           </div>
           <div>
             <Button title='Retirar Valor' onClick={() => {
-              setData({
-                ...data,
-                saldo: data.saldo - Number(dataField)
-              })
+              if(data.saldo - Number(dataField) < 0){
+                setDataField(0)                
+                alert('Saldo insuficiente')
+              } else {
+                setData({
+                  ...data,
+                  saldo: data.saldo - Number(dataField)
+                })
+              }
               setDataField(0)
             }} />
           </div>

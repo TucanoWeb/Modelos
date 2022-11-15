@@ -16,7 +16,8 @@ O sistema demonstra, simulando abertura de uma conta bancária e seu fechmando, 
 npx create-next-app@latest my-app
 npm i styled-components
 npm i babel-plugin-styled-components
-npm i @types/styled-components     
+npm i @types/styled-components
+
 ```
 
 
