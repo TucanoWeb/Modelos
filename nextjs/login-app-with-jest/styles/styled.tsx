@@ -5,30 +5,35 @@ export const HeaderContainer = styled.div`
     
     width: 100%;
     height: 50px;
-    border: 1px solid black;
+    background-color: black;
     align-items: center;
     display: flex;
+    color: white;
+
+    button {
+        margin: 0px 30px;
+    }
+
 
 `
 export const LogotipoStyle = styled.div`
     width: 10%;
-    border: 1px solid green;
     flex: 2;
     text-align: center;
 `
 
 export const SpaceHeader = styled.div`
     width: 30%;
-    border: 1px solid red;
     flex: 4;
 `
 
 export const MenuHeader = styled.div`
     width: 60%;
-    border: 1px solid blue;
     display: flex;
     flex-direction: row;
     flex: 4;
+    justify-content: center;
+    align-items: center;
 
     h1{
         text-transform: uppercase;
@@ -45,11 +50,12 @@ export const MenuHeader = styled.div`
 
 export const ContainerFooter = styled.div`
     width: 100%;
-    height: 40px;
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    background-color: black;
+    color: white;
 `
 
 
@@ -64,4 +70,24 @@ export const ContainerBody = styled.div`
     align-items: center;
     justify-content: center;
 
+    input{
+        margin: 5px 0;
+    }
+
+`
+
+export const ContainerButton = styled.div`
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    button {
+        width: 80%;
+        margin: 10px 0;
+    }
+`
+
+export const ContainerWarning = styled.div`
+    width: 30%;
+    margin-bottom: 15px;
 `

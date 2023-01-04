@@ -1,7 +1,7 @@
-import { Button } from '@chakra-ui/react';
 import Link from 'next/link';
 import { MenuHeader } from '../../../styles/styled';
 import { useEffect, useState } from 'react';
+import ButtonForm from '../Button/Button';
 import {
     HeaderContainer,
     LogotipoStyle,
@@ -10,7 +10,7 @@ import {
 
 const Header = () => {
 
-    const [token, setToken] = useState('')
+    const [token, setToken] = useState<string | null>('')
 
     useEffect(() => {
         setToken(localStorage.getItem('token'))
@@ -43,8 +43,8 @@ const Header = () => {
                     <Link href='/minha-conta'>
                         <h1>Minha Conta</h1>
                     </Link>
-                    {token === 'ativado' && 
-                        <Button onClick={() => logout()}>Sair</Button>
+                    {token === 'ativado' &&
+                        <ButtonForm onClick={() => logout()} description={'Sair'} />
 
                     }
 

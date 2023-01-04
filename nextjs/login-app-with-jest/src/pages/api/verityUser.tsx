@@ -1,6 +1,20 @@
 import { IVerifyUser } from './type';
 import { UserDB, ErrorDB } from "../../../services/db"
-import { useState } from 'react';
+import { Alert, AlertIcon } from '@chakra-ui/react';
+import { ContainerWarning } from '../../../styles/styled';
+
+
+export function dataUsertest(email: string, password: string) {
+
+    if (email === 'admin3@test.com' && password === '123456') {
+        return true
+
+    } else {
+
+        return false
+    }
+
+}
 
 
 const VerifyUser: React.FC<IVerifyUser> = ({ value }) => {
@@ -14,6 +28,8 @@ const VerifyUser: React.FC<IVerifyUser> = ({ value }) => {
             setTimeout(() => {
                 window.location.reload()
             }, 2000)
+
+
         } else {
 
             if (UserDB[key + 1] === undefined) {
@@ -29,8 +45,22 @@ const VerifyUser: React.FC<IVerifyUser> = ({ value }) => {
 
     return (
         <>
+            <ContainerWarning>
+                <>
             {UserDB.map(dataUserMap as () => void)}
-            {errorMessage.length > 0 ? 'Dados incorretos' : 'Verificando Dados'}
+            {errorMessage.length > 0 ?
+                <Alert status='error'>
+                    <AlertIcon />
+                    Dados Incorretos
+                </Alert>
+                :
+                <Alert status='success'>
+                    <AlertIcon />
+                    Login realizado com sucesso. Por favor, aguarde o carregamento da página.
+                </Alert>
+            }
+            </>
+            </ContainerWarning>
 
         </>
     )

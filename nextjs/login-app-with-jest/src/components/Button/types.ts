@@ -1,5 +1,5 @@
 export interface IButtonForm {
     description: string,
     type?: any
-    onClick: () => {}
+    onClick: () => void
 }
