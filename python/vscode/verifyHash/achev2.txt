@@ -1,0 +1,1 @@
+Verificação de função de análise de hash
