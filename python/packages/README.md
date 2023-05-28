@@ -79,6 +79,14 @@ Após isso, execute o comando abaixo para compilar o pacote:
 python setup.py sdist bdist_wheel 
 ```
 
+Publicar o pacote para teste no test.pypi
+```bash
+python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
 
+Depois de testar se o pacote está correto, basta fazer o upload no diretório do pypi
+```bash
+python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+```
 
 
