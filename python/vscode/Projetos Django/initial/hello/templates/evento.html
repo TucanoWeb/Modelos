@@ -1,0 +1,33 @@
+{% extends 'model-page.html' %}
+
+{% block content %}
+
+    <h2>Evento</h2>
+
+    <form method="post" action="submit" class="form">{% csrf_token %}
+
+        {% if evento.id %}
+            <input name="id_evento" value={{evento.id}} hidden type="number">
+        {% endif %}
+        
+        <label>Título</label>
+        <!- ATENÇÃO: Ter atenção em encapsular o objeto com aspas (simples ou duplas) ->
+        <input type="text" name="title" value="{{ evento.titulo }}"> 
+        <!- ATENÇÃO: Ter atenção em encapsular o objeto com aspas (simples ou duplas) ->
+        
+        <label>Descrição</label>
+        <textarea  type="text" name="describe">{{evento.descricao}}</textarea>
+        
+        <label>Local</label>
+        <input type="text" name="local" value="{{evento.local}}">
+        
+        <label>Data</label>
+        <input type="datetime-local" name="date" value={{evento.get_data_input_evento}}>
+        
+        <button type="submit">Cadastrar</button>
+        
+    </form>
+
+    <a href="/">
+        <button>Cancelar</button></a>
+{% endblock content %}

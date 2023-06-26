@@ -1,0 +1,29 @@
+{% extends 'model-page.html' %}
+    
+{% block content %}
+    <h2> Agendamentos </h2>
+        <a href="evento"><button class="btn btn-info">Novo Evento</button></a>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Evento</th>
+                <th scope="col">Data / Hora</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for evento in eventos %}
+              <tr {% if evento.get_evento_atrasado %} style="color: red" {% endif %}>
+                <th scope="row">#</th>
+                <td>{{evento.titulo}}</td>
+                <td>{{evento.get_data_evento}}</td> <!- get_data_evento está em models ->
+                <td><a href="evento/?id={{evento.id}}"><button class="btn btn-success">Editar</button></a> | 
+                    <a href="evento/delete/{{evento.id}}"><button class="btn btn-danger"> Deletar </button></a> </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+              
+{% endblock %}
